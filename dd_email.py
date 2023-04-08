@@ -11,11 +11,10 @@ class DailyDigestEmail:
                         'weather': {'include': True, 'content': dd_content.get_weather_forecast()},
                         'twitter': {'include': True, 'content': dd_content.get_twitter_trends()},
                         'wikipedia': {'include': True, 'content': dd_content.get_wikipedia_article()}}
-        self.recipients_list = ['patilpriyanka982@gmail.com',
-                                'ppatil1851@gmail.com']
+        self.recipients_list = ['List of email recipients']
 
-        self.sender_credentials = {'email': 'ppmishti01@gmail.com', # your sender email address
-                                   'password': 'Mishti@123'}
+        self.sender_credentials = {'email': 'email', # your sender email address
+                                   'password': 'Pwd'}
 
     def send_email(self):
         # build email message
