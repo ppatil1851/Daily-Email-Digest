@@ -19,7 +19,7 @@ def get_random_quote(quotes_file='quotes.csv'):
 
 def get_weather_forecast(coords={'lat': 28.4717 ,'lon':-80.5378}):
     try:
-        api_key= 'e33f01646531c26304e692b68172d093'
+        api_key= 'api_key'
         url=f'https://api.openweathermap.org/data/2.5/forecast?lat={coords["lat"]}&lon={coords["lon"]}&appid={api_key}&units=metric'
         data= json.load(request.urlopen(url))
         forecast = {'city': data['city']['name'], # city name
@@ -39,8 +39,8 @@ def get_weather_forecast(coords={'lat': 28.4717 ,'lon':-80.5378}):
 
 def get_twitter_trends(woeid=23424977):
     try:
-        api_key='ZQmrEuyRF1Ohck3bcdOcbhbSK'
-        api_secret_key='uVMV5atUHX1nOoE8AdcG8bkgf6cNC4RjXG6RobzJykpxOOTmv6'
+        api_key='api_key'
+        api_secret_key='api_secret_key'
         auth= tweepy.AppAuthHandler(api_key,api_secret_key)
         return tweepy.API(auth).trends_place(woeid)[0]['trends']
     except Exception as e:
